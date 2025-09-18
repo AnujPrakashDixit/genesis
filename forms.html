@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forms - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#4E3629">Foundation</font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#4E3629">HTML Basics</font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#4E3629">Lists & Tables</font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#4E3629">File Path</font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#800020"><b>&rarr; Forms</b></font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#4E3629">Media & Deployment</font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>HTML : Creating Interactive Forms</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. The &lt;form&gt; and &lt;label&gt; Elements</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Forms are used to collect input from the user. The <b>&lt;form&gt;</b> tag is
+the main container for all form fields.
+
+An <b>&lt;input&gt;</b> creates a field, but it's meaningless without a
+<b>&lt;label&gt;</b>. The 'for' attribute of the label must match the 'id'
+of the input to connect them. This is crucial for usability and
+accessibility.
+
+<b>Example:</b>
+&lt;form&gt;
+  &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName"&gt;
+&lt;/form&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. The 'name' Attribute & Submitting</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+To submit a form, you need a submit button. The <b>&lt;button&gt;</b> tag
+with <b>type="submit"</b> is the modern way to do this.
+
+The <b>name</b> attribute is essential. It acts as the "data label" or "key"
+for the information sent to the server. The 'id' is for the browser,
+the 'name' is for the server.
+
+<b>Example:</b>
+&lt;form&gt;
+  &lt;label for="firstName"&gt;First Name:&lt;/label&gt;
+  &lt;input type="text" id="firstName" name="firstName"&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>3. Radio Buttons & Checkboxes</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+<b>Radio Buttons (Select One):</b>
+Use <b>&lt;input type="radio"&gt;</b> when a user can only choose one option.
+All radio buttons in a group must share the same 'name' attribute.
+
+&lt;input type="radio" id="sizeS" name="shirtSize" value="small"&gt;
+&lt;label for="sizeS"&gt;Small&lt;/label&gt;
+
+<b>Checkboxes (Select Many):</b>
+Use <b>&lt;input type="checkbox"&gt;</b> for multiple selections.
+
+&lt;input type="checkbox" id="pep" name="toppings" value="pepperoni"&gt;
+&lt;label for="pep"&gt;Pepperoni&lt;/label&gt;
+                    </pre>
+                </font></p>
+                <hr>
+                
+                <h2><font color="#4E3629"><u>4. Textarea & Select Dropdowns</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+<b>Textarea (Multi-line Text):</b>
+For longer text input like comments or addresses. 'rows' and 'cols'
+attributes control its size.
+
+&lt;label for="comments"&gt;Comments:&lt;/label&gt;
+&lt;textarea id="comments" name="comments" rows="4"&gt;&lt;/textarea&gt;
+
+<b>Select Dropdown (Long Lists):</b>
+For choosing one option from a long list. The <b>&lt;select&gt;</b> tag
+contains multiple <b>&lt;option&gt;</b> tags.
+
+&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+&lt;/select&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>5. Specialized Input Types (HTML5)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+HTML5 added smarter input types for better user experience.
+
+- <b>password:</b> Masks the input with dots.
+  &lt;input type="password" name="userPass"&gt;
+
+- <b>number:</b> Shows a number keypad on mobile and allows for 'min'
+  and 'max' validation.
+  &lt;input type="number" name="age" min="18" max="99"&gt;
+
+- <b>date:</b> Displays a calendar date picker in most browsers.
+  &lt;input type="date" name="dob"&gt;
+                    </pre>
+                </font></p>
+                <hr>
+                <h2><font color="#4E3629"><u>Form Example</u></font></h2>
+                <img src="./assets/form.png" alt="" height="400">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

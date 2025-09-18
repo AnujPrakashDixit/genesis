@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Media & Deployment - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#4E3629">Foundation</font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#4E3629">HTML Basics</font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#4E3629">Lists & Tables</font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#4E3629">File Path</font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#4E3629">Forms</font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#800020"><b>&rarr; Media & Deployment</b></font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>HTML : Media & Special Characters</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. Embedding Media (&lt;video&gt; & &lt;audio&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+HTML5 introduced native tags for media, removing the need for plugins
+like Flash. The <b>&lt;video&gt;</b> and <b>&lt;audio&gt;</b> tags are used to embed
+media directly into a webpage.
+
+The <b>controls</b> attribute is essential. It's a boolean attribute that
+adds a full set of player controls (play, pause, volume, etc.).
+
+<b>Video Example:</b>
+&lt;video src="my-awesome-video.mp4" controls&gt;&lt;/video&gt;
+
+<b>Audio Example:</b>
+&lt;audio src="Mahol pura wavy.mp3" controls&gt;&lt;/audio&gt;
+
+Play Maahol Thoda Wavyyy &#127754; &#127754;
+
+<audio src="./assets/Mahol pura wavy.mp3" controls></audio>
+                    </pre>
+                </font></p>
+            
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. Common Media Attributes</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+You can control the behavior and appearance of the media player.
+
+- <b>width/height:</b> Sets the dimensions of the video player.
+  &lt;video src="vid.mp4" width="640" height="360" controls&gt;&lt;/video&gt;
+
+- <b>autoplay/muted:</b> Starts the video automatically, but must be muted
+  to work in modern browsers.
+  &lt;video src="vid.mp4" autoplay muted&gt;&lt;/video&gt;
+
+- <b>loop:</b> Restarts the media from the beginning when it finishes.
+
+- <b>poster:</b> Displays an image thumbnail before the video is played.
+  &lt;video src="vid.mp4" poster="thumbnail.jpg" controls&gt;&lt;/video&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>3. The &lt;source&gt; Element (Compatibility)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Not all browsers support the same video formats (.mp4, .webm, .ogg).
+To ensure your video works everywhere, provide multiple formats using
+the <b>&lt;source&gt;</b> tag. The browser will play the first one it supports.
+
+This is the professional and most reliable way to embed video.
+
+<b>Example:</b>
+&lt;video controls&gt;
+  &lt;source src="my-video.webm" type="video/webm"&gt;
+  &lt;source src="my-video.mp4" type="video/mp4"&gt;
+  Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;
+
+I made this edit for my Favourite Basketball Player Jayson Tatum &#128522;
+(I'am a part time Editor & Designer)
+                    </pre>
+                </font></p>
+                <video controls height="150">
+  <source src="./assets/tatumfinaledit.mp4" type="video/webm">
+ 
+  Sorry, your browser doesn't support embedded videos.
+</video>
+                <hr>
+                
+                <h2><font color="#4E3629"><u>4. Accessibility with &lt;track&gt;</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+To make videos accessible to a wider audience, use the <b>&lt;track&gt;</b> tag
+to add captions (for hearing impaired) or subtitles (for translation).
+These point to a text file in WebVTT (.vtt) format.
+
+<b>Example:</b>
+&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  &lt;track src="captions_en.vtt" kind="captions" srclang="en" label="English"&gt;
+&lt;/video&gt;
+                    </pre>
+                </font></p>
+                <hr>
+                <h2><font color="#4E3629"><u>HTML &lt;Iframe&gt; Syntax</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+The HTML &lt;iframe&gt; tag specifies an inline frame.
+An inline frame is used to embed another document within the current HTML document.
+
+<b>Example:</b>
+&lt;iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example" allowfullscreen frameborder="0"&gt;&lt;/iframe&gt;
+
+<iframe src="https://www.youtube.com/embed/C6QYjZI5E_U" style="height:200px;width:300px;" title="Iframe Example" allowfullscreen frameborder="0"></iframe>
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>5. HTML Entities (Special Symbols)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+To display reserved characters or symbols, use HTML entities. They
+can be written as a name or a number.
+
+- <b>&amp;copy;</b> or <b>&amp;#169;</b> → © (Copyright)
+- <b>&amp;reg;</b>  or <b>&amp;#174;</b> → ® (Registered Trademark)
+- <b>&amp;lt;</b>   or <b>&amp;#60;</b>  → < (Less-than)
+- <b>&amp;gt;</b>   or <b>&amp;#62;</b>  → > (Greater-than)
+
+You must use entities for '<' and '>' to prevent the browser from
+thinking they are part of an HTML tag.
+                    </pre>
+                </font></p>
+                <hr>
+                   <h2><font color="#4E3629"><u>Deployment</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+  1. <u>Drag & Drop (Quick Way)</u>
+      - Go to Netlify Dashboard → Add new site → Deploy manually.
+      - Drag and drop your folder (site root or build folder).
+      - Done! You get a live URL.
+
+   2. <u>Deploy via Git (Recommended)</u>
+      - Push your code to GitHub.
+      - Netlify Dashboard → Add new site → Import existing project.
+      - Connect your repo.
+      - Set:
+        • Branch to deploy: main (or master)
+      - Click Deploy site.
+      - Done! URL will be live.
+                    </pre>
+                </font></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

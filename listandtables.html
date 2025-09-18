@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lists & Tables - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#4E3629">Foundation</font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#4E3629">HTML Basics</font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#800020"><b>&rarr; Lists & Tables</b></font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#4E3629">File Path</font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#4E3629">Forms</font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#4E3629">Media & Deployment</font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>HTML : Nested Lists and Tables</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>Introduction</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+This covers structuring complex data using nested lists for
+hierarchical information and tables for grid-based data.
+
+- <b>Nested Lists:</b> Placing a list inside of another list item.
+- <b>Tables:</b> Organizing data into a grid of rows and columns.
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. Nested Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+A list placed inside another list to create a hierarchy.
+
+<b>Example (Unordered in Unordered):</b>
+&lt;ul&gt;
+  &lt;li&gt;France
+    &lt;ul&gt;
+      &lt;li&gt;Paris&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+<b>Example (Ordered in Unordered):</b>
+&lt;ul&gt;
+  &lt;li&gt;Car
+    &lt;ol&gt;
+      &lt;li&gt;Mercedes&lt;/li&gt;
+      &lt;li&gt;BMW&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/nestedlist.png" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. Tables (&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;, &lt;th&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Used to display data in a grid.
+
+- &lt;table&gt;: The main container.
+- &lt;tr&gt;: Defines a table row.
+- &lt;td&gt;: Defines a standard data cell.
+- &lt;th&gt;: Defines a header cell (bold and centered).
+
+<b>Example:</b>
+&lt;table border="2"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Rohit&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/table.png" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>3. Advanced Table Structure</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+These tags group table content for better structure.
+
+- &lt;thead&gt;: Groups header content.
+- &lt;tbody&gt;: Groups body content.
+- &lt;tfoot&gt;: Groups footer content.
+
+<b>Example:</b>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Item&lt;/th&gt;
+      &lt;th&gt;Price&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Laptop&lt;/td&gt;
+      &lt;td&gt;$1200&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>4. Spanning Columns & Rows</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Attributes to make a cell extend over multiple cells.
+
+- <b>colspan:</b> Merges a cell with cells to its right.
+- <b>rowspan:</b> Merges a cell with cells below it.
+
+<b>Example:</b>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th colspan="2"&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+    &lt;td rowspan="2"&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Jane&lt;/td&gt;
+    &lt;td&gt;Smith&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/colspan.png" alt="">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

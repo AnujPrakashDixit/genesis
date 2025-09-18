@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>File Path - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#4E3629">Foundation</font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#4E3629">HTML Basics</font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#4E3629">Lists & Tables</font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#800020"><b>&rarr; File Path</b></font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#4E3629">Forms</font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#4E3629">Media & Deployment</font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>HTML : File Paths & Page Structure</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. The File Path System</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+A website is a collection of files (HTML, images, etc.) in folders.
+A <b>file path</b> is the exact address the browser needs to find a specific
+file.
+
+<b>Example Folder Structure:</b>
+my-website/
+├── index.html
+├── images/
+│   └── logo.png
+└── pages/
+    └── contact.html
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. Relative vs. Absolute Paths</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+<b>Relative Paths (Most Common):</b> Directions from your current file.
+- <b>Same Folder:</b> &lt;a href="about.html"&gt;About&lt;/a&gt;
+- <b>Go Down:</b> &lt;img src="images/logo.png"&gt;
+- <b>Go Up:</b> &lt;img src="../images/logo.png"&gt; (from contact.html)
+
+ALWAYS use relative paths for your own project files.
+
+<b>Absolute Paths (External Files):</b> The full web URL.
+- Use for linking to other websites or hosted files (e.g., Google Fonts).
+&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>3. The HTML Boilerplate</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+The standard starting template for every HTML file. It gives the
+browser essential setup information.
+
+&lt;!DOCTYPE html&gt;              - Use latest HTML standards.
+&lt;html lang="en"&gt;             - Sets language to English.
+  &lt;head&gt;                     - Container for metadata (for browser).
+    &lt;meta charset="UTF-8"&gt;   - Ensures characters display correctly.
+    &lt;meta name="viewport"&gt;   - Makes page mobile-friendly.
+    &lt;title&gt;Page Title&lt;/title&gt; - Sets the text in the browser tab.
+  &lt;/head&gt;
+  &lt;body&gt;                     - Container for all visible content.
+  &lt;/body&gt;
+&lt;/html&gt;
+
+Browsers are forgiving and will try to render pages without it, but this
+can lead to bugs, poor mobile display, and bad SEO. <b>Always use it.</b>
+                    </pre>
+                </font></p>
+                <hr>
+                
+                <h2><font color="#4E3629"><u>4. Structuring Content (&lt;div&gt; & &lt;span&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+<b>&lt;div&gt; (The Generic Box):</b>
+A block-level container to group elements together for styling.
+It creates a "box" around other tags.
+
+<b>&lt;span&gt; (The Inline Highlighter):</b>
+An inline container to style a small piece of text *within* a line,
+without creating a line break.
+
+<b>id and class (Labels for Boxes):</b>
+- <b>id:</b> A UNIQUE identifier for one specific element. (#main-header)
+- <b>class:</b> A REUSABLE classifier for multiple elements. (.profile-card)
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>5. Semantic Tags</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+HTML tags that give meaning to the content inside them. They act like
+&lt;div&gt;s but tell the browser what the content *is*.
+
+- <b>&lt;header&gt;:</b> Box for introductory content (logo, navigation).
+- <b>&lt;main&gt;:</b> Box for the unique, main content of the page.
+- <b>&lt;footer&gt;:</b> Box for closing content (copyright, contact info).
+- <b>&lt;nav&gt;:</b> For a block of navigation links.
+- <b>&lt;section&gt;:</b> For a thematic grouping of content.
+                    </pre>
+                </font></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

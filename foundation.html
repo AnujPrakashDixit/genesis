@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Foundation - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#800020"><b>&rarr; Foundation</b></font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#4E3629">HTML Basics</font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#4E3629">Lists & Tables</font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#4E3629">File Path</font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#4E3629">Forms</font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#4E3629">Media & Deployment</font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>How The Internet Works</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. Core Principles</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+The internet evolved as a series of solutions to key challenges.
+
+- <b>Direct Link:</b> The simplest network is a single cable connecting two
+  computers. This works, but doesn't scale.
+
+- <b>Local Network:</b> To connect many computers in one location (like an
+  office), each one connects to a central device called a <b>Switch</b>.
+  The Switch manages traffic efficiently within that single network.
+
+- <b>A Network of Networks:</b> To connect different local networks, a
+  device called a <b>Router</b> is used. Routers act like traffic police,
+  directing data between different networks. The internet is the result
+  of millions of these networks all connected by routers.
+                    </pre>
+                </font></p>
+                <img src="./assets/finalnetowork.png" height="200">
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. Addressing and Packets (TCP/IP)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+- <b>IP Address:</b> To find a specific computer in this global network,
+  every device needs a unique address, known as its IP Address. Routers
+  read this address to forward data in the right direction.
+
+- <b>Packets:</b> Instead of sending large files in one go, the data is
+  broken into thousands of small, numbered pieces called <b>packets</b>.
+  This is more reliable and fair to other users on the network.
+
+- <b>TCP/IP:</b> This is the official rulebook of the internet. It defines
+  how to address, break down, send, and reassemble packets to ensure
+  data arrives correctly.
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>3. IPv4: Public vs. Private Addresses</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+<b>IPv4</b> is the original 32-bit address system, providing about 4.3 billion
+addresses. When it became clear we would run out, the public vs. private
+system was created as a clever solution.
+
+- <b>Public IP:</b> This is a globally unique address that is visible on
+  the internet, assigned by your ISP. Web servers need public IPs so
+  that anyone in the world can connect to them.
+
+- <b>Private IP:</b> This is a local address used only inside your private
+  network (like your home Wi-Fi). Your laptop and phone use private IPs
+  to talk to your router, but they are not visible to the outside world.
+  Common private ranges include 192.168.x.x and 10.x.x.x.
+                    </pre>
+                </font></p>
+                <img src="./assets/IPv4.png" alt="">
+                <hr>
+                
+                <h2><font color="#4E3629"><u>4. IPv6 & MAC Addresses</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+- <b>IPv6:</b> The long-term solution to the IPv4 shortage. It uses a 128-bit
+  address, providing a virtually unlimited supply of IP addresses for the
+  foreseeable future.
+
+- <b>MAC Address:</b> This is a permanent, physical address burned into the
+  network hardware by the manufacturer. While an IP address is like your
+  home's mailing address (which can change if you move), a MAC address is
+  like the unique serial number of your phone (which never changes).
+                    </pre>
+                </font></p>
+                <img src="./assets/IPv6.png" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>5. Port Numbers</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+An IP address gets data to the correct <b>computer</b>. A port number directs
+that data to the correct <b>application</b> running on that computer.
+
+- <b>Analogy:</b> An IP address is the street address of an apartment building,
+  and the port number is the specific apartment number.
+
+- <b>Well-Known Ports (0-1023):</b> Reserved for standard services.
+  - Port 80: HTTP (Standard web traffic)
+  - Port 443: HTTPS (Secure web traffic)
+
+- <b>Registered Ports (1024-49151):</b> Used by specific applications, like
+  databases or development servers (e.g., Port 3000 for React).
+                    </pre>
+                </font></p>
+                <hr>
+                
+                <h2><font color="#4E3629"><u>6. DNS: The Internet's Phonebook</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+DNS (Domain Name System) is the system that translates human-friendly
+domain names (like www.google.com) into computer-friendly IP addresses.
+
+<b>How it works:</b>
+1. When you type a domain name, your computer first checks its own memory
+   (cache) to see if it already knows the IP address.
+2. If not, it asks a DNS server (usually from your ISP).
+3. That server then queries a series of more authoritative servers across
+   the internet, starting from the Root, to find the correct IP.
+4. Once found, the IP address is sent back to your computer, which can
+   now connect directly to the website's server.
+                    </pre>
+                </font></p>
+                <img src="./assets/DNS.png" alt="">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

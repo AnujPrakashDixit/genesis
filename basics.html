@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>HTML Basics - HTML Genesis</title>
+</head>
+
+<body bgcolor="#FAF0E6">
+
+    <table cellspacing="10" cellpadding="10" width="100%">
+        <tr>
+            <td valign="top" bgcolor="#f1f1f1" width="19%">
+                <h3>
+                    <font color="#4E3629">Lecture Notes</font>
+                </h3>
+                <a href="foundation.html">
+                    <font color="#4E3629">Foundation</font>
+                </a><br><br>
+                <a href="basics.html">
+                    <font color="#800020"><b>&rarr; HTML Basics</b></font>
+                </a><br><br>
+                <a href="listandtables.html">
+                    <font color="#4E3629">Lists & Tables</font>
+                </a><br><br>
+                <a href="filepath.html">
+                    <font color="#4E3629">File Path</font>
+                </a><br><br>
+                <a href="forms.html">
+                    <font color="#4E3629">Forms</font>
+                </a><br><br>
+                <a href="mediaanddeployment.html">
+                    <font color="#4E3629">Media & Deployment</font>
+                </a><br><br>
+                <hr>
+                <a href="home.html">
+                    <font color="#4E3629"><b>&larr; Back to Home</b></font>
+                </a>
+            </td>
+
+            <td>
+                <h1>
+                    <font color="#36454F"><b>HTML : Hyper Text Markup Language</b></font>
+                </h1>
+                <hr>
+
+                <h2><font color="#4E3629"><u>Introduction</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+HTML stands for <b>HyperText Markup Language</b>. It is the standard language used 
+to create and structure the content of a webpage.
+
+- <b>HyperText:</b> The ability to link web pages together.
+- <b>Markup Language:</b> Using "tags" to give meaning and structure to text.
+
+First Website: https://info.cern.ch/hypertext/WWW/TheProject.html
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>Setting Up</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+1. Install <b>Visual Studio Code</b> → https://code.visualstudio.com/
+2. Install Extensions:
+   • Live Server
+   • Prettier (for clean code formatting)
+                    </pre>
+                </font></p>
+                <hr>
+
+                <h2><font color="#4E3629"><u>1. Headings (&lt;h1&gt; to &lt;h6&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Headings define titles and subtitles, creating a logical hierarchy.
+<b>Purpose:</b> To give content structural importance, not just to make text large.
+
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+...
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/heading.jpg" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>2. Paragraphs & Breaks (&lt;p&gt;, &lt;hr&gt;, &lt;br&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+- <b>&lt;p&gt;:</b> The paragraph tag groups sentences into a block of text.
+  Browsers automatically add space before and after.
+
+- <b>&lt;hr&gt;:</b> The horizontal rule tag creates a thematic break or a visible line.
+
+- <b>&lt;br&gt;:</b> The line break tag forces text onto the next line.
+
+<b>Example:</b>
+&lt;p&gt;This is the first paragraph.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;221B Baker Street&lt;br&gt;London, England&lt;/p&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/para line break .png" alt="">
+                <hr>
+                
+                <h2><font color="#4E3629"><u>3. Lists (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+Used to group related items together.
+
+<b>&lt;ul&gt; (Unordered List):</b> Creates a bulleted list.
+&lt;ul&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Sugar&lt;/li&gt;
+&lt;/ul&gt;
+
+<b>&lt;ol&gt; (Ordered List):</b> Creates a numbered list.
+&lt;ol&gt;
+  &lt;li&gt;Boil water&lt;/li&gt;
+  &lt;li&gt;Add tea&lt;/li&gt;
+&lt;/ol&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/list.png" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>4. Anchor Links (&lt;a&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+The anchor tag creates hyperlinks to other pages or files.
+
+- <b>href:</b> The 'hypertext reference' or destination URL. (Required)
+- <b>target:</b> Specifies where to open the link.
+  - "_self": (Default) Opens in the same tab.
+  - "_blank": Opens in a new tab.
+
+<b>Example:</b>
+&lt;a href="https://www.google.com" target="_blank"&gt;Go to Google&lt;/a&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/a tag.png" alt="">
+                <hr>
+
+                <h2><font color="#4E3629"><u>5. Images (&lt;img&gt;)</u></font></h2>
+                <p><font color="#4a4441" size="4">
+                    <pre>
+The image tag is a self-closing tag used to embed images.
+
+- <b>src:</b> The 'source' path or URL to the image file. (Required)
+- <b>alt:</b> 'Alternative text' for accessibility and if the image fails to load.
+- <b>width/height:</b> Sets the dimensions of the image.
+
+<b>Example:</b>
+&lt;img src="bhaiya.jpg" width="300" height="300" alt="Hero Ki Photo"&gt;
+                    </pre>
+                </font></p>
+                <img src="./assets/imageex.png" alt="">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
